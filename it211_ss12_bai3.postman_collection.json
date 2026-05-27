@@ -1,0 +1,90 @@
+{
+  "info": {
+    "_postman_id": "e48e5e88-5e3d-4751-a640-d33a177553ae",
+    "name": "it211_ss12_bai3",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "50951921",
+    "_collection_link": "https://go.postman.co/collection/50951921-e48e5e88-5e3d-4751-a640-d33a177553ae?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "kiểm tra danh sách đơn hàng",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "Tạo mới đơn hàng",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"customerName\": \"Linh\",\r\n    \"product\": \"Laptop\",\r\n    \"quantity\": 1,\r\n    \"totalAmount\": 1500.0\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/orders",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "orders"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Lấy đơn hàng theo ID tồn tại",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/orders/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "orders",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Lấy đơn hàng theo ID không tồn tại",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/orders/999",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "orders",
+            "999"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
